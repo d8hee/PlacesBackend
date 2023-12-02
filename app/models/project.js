@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
       // another association for a project to have many listings
       project.hasMany(models.listing, {
         foreignKey: "projectId",
-        as: "project",
+        // as: "projects",
       })
     }
   }

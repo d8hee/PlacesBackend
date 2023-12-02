@@ -1,3 +1,5 @@
+// Sequelize model looks for table w plural form of model name
+
 'use strict';
 const {
   Model
@@ -14,17 +16,17 @@ module.exports = (sequelize, DataTypes) => {
       builder.hasMany(models.project, {
         // create a foreignKey
         foreignKey: "builderId",
-        as: "builder",
+        // as: "builders",
       })
     }
   }
   builder.init({
     username: DataTypes.STRING,
     email: DataTypes.STRING,
-    projects: DataTypes.STRING
-  }, {
-    sequelize,
-    modelName: 'builder',
-  });
+  },
+    {
+      sequelize,
+      modelName: 'builder',
+    });
   return builder;
 };

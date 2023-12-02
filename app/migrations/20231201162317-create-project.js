@@ -29,13 +29,14 @@ module.exports = {
       // add a belongsTo() association
       // creating builderID column, and setting reference
       // need hasMany() in the referenced model file.
-      builderID: {
+      builderId: {
         type: Sequelize.INTEGER,
         references: {
           // match table name
           model: "builders",
           key: "id",
-          as: "builderID"
+          // alias
+          as: "builderId"
         }
       }
     });

@@ -53,13 +53,14 @@ module.exports = {
       // add a belongsTo() association
       // creating projectID column, and setting reference
       // need hasMany() in the referenced model file.
-      projectID: {
+      projectId: {
         type: Sequelize.INTEGER,
         references: {
           // match table name
           model: "projects",
           key: "id",
-          as: "projectID"
+          as: "projectId"
+          //prev mistyped as 'projectID'
         }
       }
     });
