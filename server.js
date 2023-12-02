@@ -35,7 +35,7 @@ app.get('/places/listings', async (req, res) => {
 // SHOW ROUTES
 app.get('/places/builders/:id', async (req, res) => {
     res.json(await models.builder.findByPk(req.params.id))
-})
+}) 
 
 app.get('/places/projects/:id', async (req, res) => {
     res.json(await models.project.findByPk(req.params.id))
@@ -44,8 +44,6 @@ app.get('/places/projects/:id', async (req, res) => {
 app.get('/places/listings/:id', async (req, res) => {
     res.json(await models.listing.findByPk(req.params.id))
 })
-
-// CREATE ROUTES
 
 
 
