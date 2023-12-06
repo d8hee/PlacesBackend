@@ -15,6 +15,12 @@ module.exports = {
     password: PROD_DATABASE_PASSWORD,
     database: "placesApp_development",
     host: PROD_DATABASE_HOST,
-    dialect: "postgres"
+    dialect: "postgres",
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+     },
+   }
   }
 }
