@@ -13,7 +13,7 @@ module.exports = {
   production: {
     username: PROD_DATABASE_USERNAME,
     password: PROD_DATABASE_PASSWORD,
-    database: "placesApp_development",
+    database: "d7ol75qiq8l2lt",
     host: PROD_DATABASE_HOST,
     dialect: "postgres",
     dialectOptions: {
