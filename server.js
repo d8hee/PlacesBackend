@@ -3,6 +3,7 @@ require('dotenv').config()
 const bodyParser = require('body-parser')
 const express = require('express')
 const app = express()
+const cors = require("cors")
 
 const PORT = process.env.PORT || 3000
 
@@ -12,6 +13,9 @@ const PORT = process.env.PORT || 3000
 app.use(express.json())
 // .urlencoded() recognizes req object as strings or arrays
 app.use(express.urlencoded({ extended: true }))
+app.use(cors())
+
+
 
 // ---------------MODELS---------------
 // requiring obj from models module
@@ -116,6 +120,7 @@ app.put('/places/listings/:id', async (req, res) => {
         res.status(400).json(err)
     }
 })
+
 // DELETE
 // builder id 2 is still referenced from table projects...
 app.delete('/places/builders/:id', async (req, res) => {
