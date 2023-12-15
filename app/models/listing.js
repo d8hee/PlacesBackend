@@ -29,7 +29,8 @@ module.exports = (sequelize, DataTypes) => {
     parking: DataTypes.INTEGER,
     locker: DataTypes.INTEGER,
     sold: DataTypes.BOOLEAN,
-    public: DataTypes.BOOLEAN
+    public: DataTypes.BOOLEAN,
+    image: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'listing',

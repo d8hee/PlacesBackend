@@ -26,7 +26,9 @@ module.exports = (sequelize, DataTypes) => {
   project.init({
     name: DataTypes.STRING,
     city: DataTypes.STRING,
-    launch: DataTypes.DATE
+    launch: DataTypes.DATE,
+    image: DataTypes.STRING,
+    description: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'project',
